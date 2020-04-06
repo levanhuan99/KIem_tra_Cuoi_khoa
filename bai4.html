@@ -3,8 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
 </head>
+<canvas id="cavas " height="300" width="300" style="border: 0.5px black solid"></canvas>
 <body>
+<script>
+    //khai bao
+    let c=document.getElementById("cavas");
+    let ctx=c.getContext('2d');
+    let DrawCircle=function (x,y,radius,color) {
+        this.x=x;
+        this.y=y;
+        this.radius=radius;
+        this.color=color;
+        this.render=function () {
+
+            ctx.beginPath();
+            ctx.strokeStyle="this.color";
+            ctx.arc(this.x,this.y,this.radius*Math.PI);
+            ctx.stroke();
+
+        }
+    };
+    let circle=new DrawCircle(100,100,50,"Red");
+    circle.render();
+
+
+</script>
 
 </body>
 </html>

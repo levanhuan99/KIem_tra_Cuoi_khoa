@@ -5,27 +5,31 @@
     <title>Title</title>
 
 </head>
-<canvas id="cavas " height="300" width="300" style="border: 0.5px black solid"></canvas>
 <body>
+<div>
+    <canvas id="cavas" height="300" width="300" style="border: black 1px solid"></canvas>
+
+</div>
 <script>
     //khai bao
     let c=document.getElementById("cavas");
     let ctx=c.getContext('2d');
-    let DrawCircle=function (x,y,radius,color) {
+
+    let DrawCircle=function (x,y,radius) {
         this.x=x;
         this.y=y;
         this.radius=radius;
-        this.color=color;
+
+
         this.render=function () {
 
             ctx.beginPath();
-            ctx.strokeStyle="this.color";
-            ctx.arc(this.x,this.y,this.radius*Math.PI);
-            ctx.stroke();
-
+            ctx.arc(this.x,this.y,this.radius,0,2*Math.PI);
+            ctx.fill();
         }
+
     };
-    let circle=new DrawCircle(100,100,50,"Red");
+    let circle=new DrawCircle(100,100,50);
     circle.render();
 
 

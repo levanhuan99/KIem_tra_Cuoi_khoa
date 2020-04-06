@@ -10,15 +10,22 @@
     //   bai2
     function tryRemoveFromArray(arr,x) {
 
-        for (let i=0;i<arr.length<i++){
+        for(let i=0; i<arr.length; i++){
             if(x===arr[i]){
-
+                arr.splice(arr[i],1);
+                return true;
             }
             else {
-                return arr;
+                return false;
             }
         }
     }
+    let A=[1,2,3,4];
+    let x=tryRemoveFromArray(A,2);
+    document.write(x);
+    // let A=[1,2,3,4];
+    // A.splice(2,1);
+    // document.write(A);
 
 
 </script>

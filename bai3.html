@@ -8,13 +8,33 @@
 <script>
     //bai 3
 
+    let arr=[0,1];
+    function arrayFibonacci(number) {
 
-    function isFibonacci(number) {
-        let a=0;
-        let b=1;
-
+        for (let i=2;i<number+1;i++){
+            arr[i]=arr[i-1]+arr[i-2];
+            arr[i].push;
+        }
+        return arr;
+    }
+    function check(number) {
+        let x=arrayFibonacci();
+        for (let i=0; i<x.length; i++){
+            if (number===x[i]){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
 
     }
+    // let arr=[0,1];
+    // for (let i=2;i<4;i++){
+    //     arr[i]=arr[i-1]+arr[i-2];
+    //     arr[i].push
+    // }
+    // document.write(arr);
 
 </script>
 </body>
